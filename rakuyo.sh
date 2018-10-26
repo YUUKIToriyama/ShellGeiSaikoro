@@ -1,0 +1,21 @@
+#!/bin/sh
+
+ransuu=$(echo $RANDOM)
+
+saikoro=$(echo $ransuu | awk '{print $1%6}')
+
+echo "乱数は$ransuu  値は$saikoro"
+
+if [ "$saikoro" -eq "1" ]
+	then echo -e "\U26AB \U26AB \U26AB\n\U26AB \U26AA \U26AB\n\U26AB \U26AB \U26AB"
+elif [ "$saikoro" -eq "2" ]
+	then echo -e "\U26AA \U26AB \U26AB\n\U26AB \U26AB \U26AB\n\U26AB \U26AB \U26AA"
+elif [ "$saikoro" -eq "3" ]
+	then echo -e "\U26AA \U26AB \U26AB\n\U26AB \U26AA \U26AB\n\U26AB \U26AB \U26AA"
+elif [ "$saikoro" -eq "4" ]
+	then echo -e "\U26AA \U26AB \U26AA\n\U26AB \U26AB \U26AB\n\U26AA \U26AB \U26AA"
+elif [ "$saikoro" -eq "5" ]
+	then echo -e "\U26AA \U26AB \U26AA\n\U26AB \U26AA \U26AB\n\U26AA \U26AB \U26AA"
+else
+	     echo -e "\U26AA \U26AB \U26AA\n\U26AB \U26AB \U26AA\n\U26AA \U26AA \U26AA"
+fi
