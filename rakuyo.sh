@@ -1,10 +1,8 @@
 #!/bin/sh
 
-ransuu=$(echo $RANDOM)
+saikoro=$(seq 1 6 | shuf | head -1)
 
-saikoro=$(echo $ransuu | awk '{print $1%6}')
-
-echo "乱数は$ransuu  値は$saikoro"
+echo "サイコロの目は$saikoro"
 
 if [ "$saikoro" -eq "1" ]
 	then echo -e "\U26AB \U26AB \U26AB\n\U26AB \U26AA \U26AB\n\U26AB \U26AB \U26AB"
